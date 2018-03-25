@@ -1,0 +1,38 @@
+<div class=" container spacer">
+  <div class="text-info">
+    <p> Création de bibliotheque</p>
+  </div>
+  <div *ngIf="mode==1">
+    <div class="form-group col-md-4">
+      <p class="text-info"> Infos bibliotheque</p>
+      <label class="custom-control-label">Nom Bibliotheque </label>
+      <!--ici ce qu'on saisi sera stockée dans nom de l'objet bibliotheque qui est dans bibliotheque.component.ts-->
+      <input class="form-control" type="text" [(ngModel)]="bibliotheque.nom">
+
+      <label class="custom-control-label">Ecole</label>
+      <!--ici ce qu'on saisi sera stockée dans nom de l'objet bibliotheque qui est dans bibliotheque.component.ts-->
+      <input class="form-control" type="text" [(ngModel)]="bibliotheque.ecole">
+
+      <button class="btn-primary spacer" (click)="SaveBiblio()">Enregistrer</button>
+    </div>
+  </div>
+
+
+  <!--si le mode est different de 1-->
+  <div *ngIf="mode==2">
+
+    <div class="form-group col-md-4">
+      <p class="text-info text-danger"> Confirmation </p>
+      <label class="custom-control-label">Nom Bibliotheque </label>
+      <!--ici ce qu'on saisi sera stockée dans nom de l'objet bibliotheque qui est dans bibliotheque.component.ts-->
+      <input class="form-control" type="text" [(ngModel)]="bibliotheque.nom">
+
+      <label class="custom-control-label">Ecole</label>
+      <!--ici ce qu'on saisi sera stockée dans nom de l'objet bibliotheque qui est dans bibliotheque.component.ts-->
+      <input class="form-control" type="text" [(ngModel)]="bibliotheque.ecole">
+
+      <button class="btn-primary spacer" (click)="listDesBiblio()">Enregistrer</button>
+    </div>
+  </div>
+
+</div>

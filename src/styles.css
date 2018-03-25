@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.spacer {
+  margin-top: 30px;
+
+}
+
+.couleur {
+  background: ghostwhite;
+
+}
+
+.trWidth {
+  width: 15em;
+  text-align: center;
+}
+
+.clickable {
+  cursor: pointer;
+
+}
+
+.thead-dark {
+  color: darkblue;
+}
+
+.defile {
+  -webkit-animation: linear infinite 100ms;
+}
+
+.bg-biblio {
+  background: honeydew;
+}
+
+.bg-bibliofooter {
+  background: ghostwhite;
+}

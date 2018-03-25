@@ -1,0 +1,47 @@
+<p class="text-info">
+  lites livres de la bibiotheque!
+</p>
+<div class=" container-fluid spacer">
+  <div class="row col-md-10">
+
+  </div>
+
+
+  <div class=" row spacer col-md-10">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+      <tr>
+        <th class="trWidth ">Identifiant</th>
+        <th class="trWidth">Nom</th>
+        <th class="trWidth">Autheur</th>
+        <th class="trWidth">Domaine</th>
+        <th class="trWidth">Ranger</th>
+        <th class="trWidth">Colonne</th>
+        <th class="trWidth">Action</th>
+
+
+      </tr>
+      </thead>
+
+      <tbody class="table-striped ">
+      <tr *ngFor="let l of listesLivreBibliorecu; let i = index" [attr.data-index]="i">
+        <td>{{l.id}}</td>
+        <td>{{l.nomLivre}}</td>
+        <td>{{l.autheur}}</td>
+        <td>{{l.domaine}}</td>
+        <td>{{l.ranger}}</td>
+        <td>{{l.colonne}}</td>
+
+
+        <td>
+          <a class="clickable" (click)=modfierLivre(l.id)>Modifier</a>
+          <a class="clickable" (click)=supprimerLivre(l.id)>Supprimer</a>
+
+
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

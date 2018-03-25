@@ -1,0 +1,37 @@
+<p class="text-info">
+  ajout-livre-bibliotheque works!
+</p>
+<!--utilisation du formular angular-->
+<div class=" container spacer">
+
+  <form #f="ngForm" (ngSubmit)="ajoutLivreBiblio(f.value)">
+    <div class="form-group">
+      <label class="form-check-label">Nom livre</label>
+      <input class="form-control" type="text" ngModel name="nomLivre" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-check-label">Autheur livre</label>
+      <input class="form-control" type="text" ngModel name="autheur" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-check-label">Domaine livre</label>
+      <input class="form-control" type="text" ngModel name="domaine" required>
+    </div>
+    <div class="form-group">
+      <label class="form-check-label">Ranger du livre </label>
+      <input class="form-control" type="number" ngModel name="ranger" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-check-label">Colonne livre</label>
+      <input class="form-control" type="number" ngModel name="colonne" required>
+    </div>
+
+    <button [disabled]="!f.valid" type="submit" class="btn-primary">Enregistrer</button>
+
+
+  </form>
+
+</div>
